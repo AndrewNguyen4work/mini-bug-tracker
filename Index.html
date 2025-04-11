@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Bug Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <span id="bugAdd"> Bug added siuccessfully!</span>
+
+    <h1>🐞 Mini Bug Tracker</h1>
+
+    <form id="bugForm">
+      <input type="text" id="title" placeholder="Bug title..." required />
+      <textarea id="description" placeholder="Describe the bug..." required></textarea>
+      <select id="severity">
+        <option value="Low">Low 🟢</option>
+        <option value="Medium">Medium 🟡</option>
+        <option value="High">High 🔴</option>
+      </select>
+      <button type="submit">Add Bug</button>
+      <button onclick="clearAllBugs()">Clear All</button>
+    </form>
+    <select id="filterStatus">
+      <option value="All">All</option>
+      <option value="Open">Open</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+      <option value="Closed">Closed</option>
+    </select>
+    
+    <h2>Bug List</h2>
+    <ul id="bugList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
